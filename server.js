@@ -22,7 +22,10 @@ initializePassport(
 
 mongoose.connect('mongodb://localhost:27017/login');
 // app.set('view-engine', 'ejs')
-app.set('SESSION_SECRET = secret')
+// app.set(SESSION_SECRET = 'secret')
+// app.use(express.cookieParser('secret'));
+app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }))
+// app.use(express.cookieSession());
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
 app.use(session({
@@ -114,4 +117,4 @@ function checkNotAuthenticated(req, res, next) {
   next()
 }
 
-app.listen(3800)
+app.listen(3900)
