@@ -1,0 +1,3 @@
+1) npm init
+2) npm i express and mongoose 
+3) npm i body-parser
