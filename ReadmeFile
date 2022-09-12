@@ -1,3 +1,5 @@
 1) npm init
 2) npm i express and mongoose 
 3) npm i body-parser
+4) npm i express-session
+5) npm i passport
