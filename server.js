@@ -21,7 +21,7 @@ initializePassport(
 )
 
 mongoose.connect('mongodb://localhost:27017/login');
-
+app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
 app.use(session({
